@@ -22,51 +22,18 @@ namespace C_ConsoleApp
             //Line - Enter
             int a = 0;
             string tekst = "Python";
-            char taht = 'A';
-            double arv = 1.23456789;
+            //char taht = 'A';
+            //double arv = 1.23456789;
             float arv1 = 2;
-            Console.Write("Mis on sunu nimi? ");//print
-            tekst = Console.ReadLine();//Это как input
+            
             Console.WriteLine("Tere!\n" + tekst);
             Console.WriteLine("Tere!\n {0}",tekst);
-            if (tekst.ToLower() == "juku")
-            {
-                Console.WriteLine("Lahme kinno!");
-                try
-                {
-                    Console.WriteLine("{0}\n Kui vana sa oled?", tekst);
-                    int vanus=int.Parse(Console.ReadLine());
-                    if (vanus <= 0 || vanus > 100) // || - or, && - and
-                    {
-                        Console.WriteLine("Viga!");
-                    }
-                    else if (vanus > 0 && vanus <= 6)
-                    {
-                        Console.WriteLine("Tasuta");
-                    }
-                    else if (vanus <= 15)
-                    {
-                        Console.WriteLine("Lastepilet");
-                    }
-                    else if (vanus <= 65)
-                    {
-                        Console.WriteLine("TaisPilet");
-                    }
-                    else if (vanus <= 100)
-                    {
-                        Console.WriteLine("Sooduspilet!");
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            }
-            else
-            {
-                Console.WriteLine("Olen hoivatud!");
-            }
-                Console.WriteLine("Arv 2: ");
+            Console.Write("Mis on sunu nimi? ");//print
+            tekst = Console.ReadLine();//Это как input
+            Console.WriteLine("{0}\n Kui vana sa oled?", tekst);
+            int vanus = int.Parse(Console.ReadLine());
+            string answer = FunktsioonideClass.Jukudef(tekst, vanus);
+            Console.WriteLine("Arv 2: ");
             int arv2 = int.Parse(Console.ReadLine());// int input
             //Console.WriteLine("Arvude {0} ja {1} korrutis vordub {2}", arv1, arv2, arv1*arv2);
             arv1 = FunktsioonideClass.Kalkulaator(a, arv2);//Вызов функции
