@@ -8,82 +8,69 @@ using System.Threading.Tasks;
 //'-Символ
 namespace C_ConsoleApp
 {
-    class MainClass
+    internal class MainClass
     {
-        public static void Main(string[] args)//void мы не будем ничего возвращать
+
+        public static void Main(string[] args)
         {
-            List<string> sonad = sonad = FunktsiionideClass_2osa.Sonad();
-            /*for (int j = 0; j < 5; j++)
-            {
-                Console.Write("Nimi: ");
-                sonad.Add(Console.ReadLine());
-            }
+            //II. osa Kordused, Massivid, Listid, Klassid
+            List<string> sonad = FunktsioonideClass_2osa.Sonad();
+
             foreach (var item in sonad)
             {
                 Console.WriteLine(item);
-            }*/
-            Isik isik1 = new Isik("Juku", 19, "12345678901", "Tallinn");
-            isik1.PrindInfo();
+            }
+            Isik isik1 = new Isik("Juku", 65, "12345678901", "Tallinn");
+            isik1.PrindiInfo();
             Isik isik2 = new Isik();
             isik2.Nimi = "Mari";
             isik2.Aadress = "Tartu";
-            isik2.Isikukood = "98765432100";
-            isik2.Vanus = 22;
-            isik2.PrindInfo();
-            // Цикл for (вперёд)
+            isik2.Isikukood = "98765432101";
+            isik2.Sugu = Sugu.Naine;
+            isik2.PrindiInfo();
+
             int i;
-            Isik[] isikud = new Isik[10];
             string[] nimed = new string[10] { "Juku", "Mari", "Kati", "Peeter", "Mati", "Liina", "Katrin", "Andres", "Marko", "Kristi" };
-            string[] aadressid = new string[10] { "Tallinn", "Tartu", "Parnu", "Kohla-Jarve", "Viljandi", "Rakvere", "Paide", "Johvi", "Kuresaare", "St.Peterburg" };
-            for (i = 0; i < 10; i++)
+            string[] aadressid = new string[10] { "Tallinn", "Tartu", "Pärnu", "Narva", "Kohtla-Järve", "Viljandi", "Rakvere", "Paide", "Jõhvi", "Kuressaare" };
+            Console.WriteLine("-----for++Massiv-------");
+            Isik[] isikud = FunktsioonideClass_2osa.Isikud(nimed.Length, nimed, aadressid);
+            for (i = 0; i < nimed.Length; i++)
             {
-                Console.Write("Isikukood: ");
-                isikud[i] = new Isik {
-                    Nimi = nimed[i],
-                    Vanus = 50,
-                    Isikukood = Console.ReadLine(),
-                    Aadress = "Tallinn" + i };
+                isikud[i].PrindiInfo();
             }
-            for (i = 0; i < 10; i++)
-            {
-                isikud[i].PrindInfo();
-            }
-            Console.WriteLine("-----------");
-            // Цикл for (назад)
-            for (int j = i; j > 0; j--)
-            {
-                Console.WriteLine(j);
-            }
-            Console.WriteLine("-----------");
-            // Цикл while
+
+            Console.WriteLine("-----for--List-------");
             List<Isik> isikud2 = new List<Isik>();
-            for (int j = i; j > 0; j--)
+            for (int j = i - 1; j > -1; j--)
             {
                 Console.WriteLine(j);
                 Isik isik = new Isik
                 {
                     Nimi = nimed[j],
                     Vanus = 50,
-                    Isikukood = "11111111111",
+                    Isikukood = "111111111111",
                     Aadress = aadressid[j]
                 };
-                isikud2.Add(isik); //Как Append
+                isikud2.Add(isik);
             }
             foreach (Isik isik in isikud2)
             {
-                isik.PrindInfo();
+                isik.PrindiInfo();
             }
-            while (i > 0)
+
+
+
+            Console.WriteLine("-----while-------");
+            while (i >= 0)
             {
                 Console.WriteLine(i);
                 i--;
             }
-            // Цикл do-while
-            Console.WriteLine("-----DO-----");
+            Console.WriteLine("-----do-------");
             ConsoleKeyInfo key = new ConsoleKeyInfo();
             do
             {
-                Console.WriteLine("Нажми Backspace");
+                Console.WriteLine("Vajuta Backspace");
                 key = Console.ReadKey();
             }
             while (key.Key != ConsoleKey.Backspace);
