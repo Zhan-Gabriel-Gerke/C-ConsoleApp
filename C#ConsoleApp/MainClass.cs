@@ -11,14 +11,31 @@ namespace C_ConsoleApp
     {
         public static void Main(string[] args)//void мы не будем ничего возвращать
         {
-            //Console.BackgroundColor = ConsoleColor.Green;//Цвет заднего фона текста
-            //Console.ForegroundColor = ConsoleColor.Blue;//Цвет текста
+            int i;
+            for (int i = 0; i < 10; i++)//i ++ - Каждое след значение на 1 больше
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("-----------");
+            for (int j = i; j > 0; j--)
+            {
+                Console.WriteLine(j);
+            }
+            Console.WriteLine("-----------");
+            while (i>0)
+            {
+                Console.WriteLine(i);
+                i--;
+            }
+            /*
+            Console.BackgroundColor = ConsoleColor.Green;//Цвет заднего фона текста
+            Console.ForegroundColor = ConsoleColor.Blue;//Цвет текста
             Console.OutputEncoding = Encoding.UTF8;//Кодировка
             Console.WriteLine("Hello world");
-            //Одностроковый комент
-            /*Многострочный комент
-             *Многострочный комент
-             */
+            Одностроковый комент
+            //Многострочный комент
+            //Многострочный комент
+            
             //Line - Enter
             int a = 0;
             string tekst = "Python";
@@ -54,6 +71,7 @@ namespace C_ConsoleApp
                     tekst = "Tundmatu";
                     break;
             }
+            */
         }
     }
 }

@@ -7,8 +7,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace C_ConsoleApp
 {
-    internal class FunktsioonideClass
+    internal class FunktsioonideClass_1osa
     {
+
+        /*
         public static float Kalkulaator(int arv1, int arv2)
         {
             float kalkulator = 0;
@@ -53,6 +55,7 @@ namespace C_ConsoleApp
                 return("Olen hoivatud!");
             }
         }
+        */
 
     }
 }
