@@ -11,8 +11,8 @@ namespace C_ConsoleApp
     {
         public static void Main(string[] args)//void мы не будем ничего возвращать
         {
-            int i;
-            for (int i = 0; i < 10; i++)//i ++ - Каждое след значение на 1 больше
+            int i;//Обьявление переменной
+            for (i = 0; i < 10; i++)//i ++ - Каждое след значение на 1 больше
             {
                 Console.WriteLine(i);
             }
@@ -22,11 +22,20 @@ namespace C_ConsoleApp
                 Console.WriteLine(j);
             }
             Console.WriteLine("-----------");
-            while (i>0)
+            while (i > 0)
             {
                 Console.WriteLine(i);
                 i--;
             }
+            Console.WriteLine("-----DO-----");
+            ConsoleKeyInfo key=new ConsoleKeyInfo();
+            do
+            {
+                Console.WriteLine("Vajuta Backspace");
+                key = Console.ReadKey();
+            }
+            while (key.Key !=ConsoleKey.Backspace);
+
             /*
             Console.BackgroundColor = ConsoleColor.Green;//Цвет заднего фона текста
             Console.ForegroundColor = ConsoleColor.Blue;//Цвет текста
