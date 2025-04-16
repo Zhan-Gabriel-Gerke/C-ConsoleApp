@@ -9,7 +9,6 @@ namespace C_ConsoleApp
 {
     internal class FunktsioonideClass_1osa
     {
-
         /*
         public static float Kalkulaator(int arv1, int arv2)
         {

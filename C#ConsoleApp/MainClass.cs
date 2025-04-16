@@ -1,5 +1,6 @@
 ﻿using System; //import modul
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,30 +12,81 @@ namespace C_ConsoleApp
     {
         public static void Main(string[] args)//void мы не будем ничего возвращать
         {
-            int i;//Обьявление переменной
-            for (i = 0; i < 10; i++)//i ++ - Каждое след значение на 1 больше
+            List<string> sonad = sonad = FunktsiionideClass_2osa.Sonad();
+            /*for (int j = 0; j < 5; j++)
             {
-                Console.WriteLine(i);
+                Console.Write("Nimi: ");
+                sonad.Add(Console.ReadLine());
+            }
+            foreach (var item in sonad)
+            {
+                Console.WriteLine(item);
+            }*/
+            Isik isik1 = new Isik("Juku", 19, "12345678901", "Tallinn");
+            isik1.PrindInfo();
+            Isik isik2 = new Isik();
+            isik2.Nimi = "Mari";
+            isik2.Aadress = "Tartu";
+            isik2.Isikukood = "98765432100";
+            isik2.Vanus = 22;
+            isik2.PrindInfo();
+            // Цикл for (вперёд)
+            int i;
+            Isik[] isikud = new Isik[10];
+            string[] nimed = new string[10] { "Juku", "Mari", "Kati", "Peeter", "Mati", "Liina", "Katrin", "Andres", "Marko", "Kristi" };
+            string[] aadressid = new string[10] { "Tallinn", "Tartu", "Parnu", "Kohla-Jarve", "Viljandi", "Rakvere", "Paide", "Johvi", "Kuresaare", "St.Peterburg" };
+            for (i = 0; i < 10; i++)
+            {
+                Console.Write("Isikukood: ");
+                isikud[i] = new Isik {
+                    Nimi = nimed[i],
+                    Vanus = 50,
+                    Isikukood = Console.ReadLine(),
+                    Aadress = "Tallinn" + i };
+            }
+            for (i = 0; i < 10; i++)
+            {
+                isikud[i].PrindInfo();
             }
             Console.WriteLine("-----------");
+            // Цикл for (назад)
             for (int j = i; j > 0; j--)
             {
                 Console.WriteLine(j);
             }
             Console.WriteLine("-----------");
+            // Цикл while
+            List<Isik> isikud2 = new List<Isik>();
+            for (int j = i; j > 0; j--)
+            {
+                Console.WriteLine(j);
+                Isik isik = new Isik
+                {
+                    Nimi = nimed[j],
+                    Vanus = 50,
+                    Isikukood = "11111111111",
+                    Aadress = aadressid[j]
+                };
+                isikud2.Add(isik); //Как Append
+            }
+            foreach (Isik isik in isikud2)
+            {
+                isik.PrindInfo();
+            }
             while (i > 0)
             {
                 Console.WriteLine(i);
                 i--;
             }
+            // Цикл do-while
             Console.WriteLine("-----DO-----");
-            ConsoleKeyInfo key=new ConsoleKeyInfo();
+            ConsoleKeyInfo key = new ConsoleKeyInfo();
             do
             {
-                Console.WriteLine("Vajuta Backspace");
+                Console.WriteLine("Нажми Backspace");
                 key = Console.ReadKey();
             }
-            while (key.Key !=ConsoleKey.Backspace);
+            while (key.Key != ConsoleKey.Backspace);
 
             /*
             Console.BackgroundColor = ConsoleColor.Green;//Цвет заднего фона текста
