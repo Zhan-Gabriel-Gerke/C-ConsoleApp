@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace C_ConsoleApp
 {
-    class Class1
+    class Person
     {
+        public string Name { get; set; }
     }
 }

@@ -12,46 +12,75 @@ namespace C_ConsoleApp
 {
     internal class MainClass
     {
-        public static void Main(string[] args)
+        public static void First()
         {
-            List<string> kuude_list = new List<string>();
-            try
-            {
-                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Kuud.txt");
-                kuude_list.Add("April");
-                kuude_list.Add("September");
-                kuude_list.Add("Juuni");
-                File.WriteAllLines(path, kuude_list);
-                Console.WriteLine("OK");
-                kuude_list.Clear();
-                foreach (string rida in File.ReadAllLines(path))
-                {
-                    kuude_list.Add(rida);
-                }
-                foreach (string kuu in kuude_list)
-                {
-                    Console.WriteLine(kuu);
-                }
-                kuude_list.Remove("Juuni");
-                kuude_list[0] = "TEST kuuu";
-                foreach (string kuu in kuude_list)
-                {
-                    Console.WriteLine(kuu);
-                }
-                Console.WriteLine("Sisesta kuu nimi, mida otsida:");
-                string otsitav = Console.ReadLine();
+            List<string> nimed = new List<string>();
+            nimed.Add("Kati");
+            nimed.Add("Mati");
+            nimed.Add("Juku");
 
-                if (kuude_list.Contains(otsitav))
-                    Console.WriteLine("Kuu " + otsitav + " on olemas.");
-                else
-                    Console.WriteLine("Sellist kuud pole.");
-                File.WriteAllLines(path, kuude_list);
+            if (nimed.Contains("Mati"))
+                Console.WriteLine("Mati olemas");
 
-            }
-            catch (Exception)
+            Console.WriteLine("Nimesid kokku: " + nimed.Count);
+
+            nimed.Insert(1, "Sass");
+
+            Console.WriteLine("Mati indeks: " + nimed.IndexOf("Mati"));
+            Console.WriteLine("Mari indeks: " + nimed.IndexOf("Mari"));
+
+            foreach (string nimi in nimed)
+                Console.WriteLine(nimi);
+        }
+        public static void Second()
+        {
+            Tuple<float, char> route = new Tuple<float, char>(2.5f, 'N');
+            Console.WriteLine($"Vahemaa: {route.Item1}, Suund: {route.Item2}");
+        }
+        public static void Thrid()
+        {
             {
-                Console.WriteLine("Viga failiga!");
+                List<Person> people = new List<Person>();
+                people.Add(new Person() { Name = "Kadi" });
+                people.Add(new Person() { Name = "Mirje" });
+
+                foreach (Person p in people)
+                    Console.WriteLine(p.Name);
             }
+        }
+        public static void Forth()
+        {
+            {
+                LinkedList<int> loetelu = new LinkedList<int>();
+                loetelu.AddLast(5);
+                loetelu.AddLast(3);
+                loetelu.AddFirst(0);
+
+                foreach (int arv in loetelu)
+                    Console.WriteLine(arv);
+
+                loetelu.RemoveFirst();
+                loetelu.RemoveLast();
+                loetelu.AddLast(555);
+                loetelu.Remove(555);
+            }
+        }
+        public static void Fifth()
+        {
+            Dictionary<int, string> riigid = new Dictionary<int, string>();
+            riigid.Add(1, "Hiina");
+            riigid.Add(2, "Eesti");
+            riigid.Add(3, "Itaalia");
+
+            foreach (var paar in riigid)
+                Console.WriteLine($"{paar.Key} - {paar.Value}");
+            string pealinn = riigid[2];
+            riigid[2] = "Eestimaa";
+            riigid.Remove(3);
+        }
+        static void Main(string[] args)
+        {
+            First();
         }
     }
 }
