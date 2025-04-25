@@ -15,14 +15,91 @@ namespace C_ConsoleApp
     {
         public static void Main(string[] args)
         {
-            
+            groceryshop();
+        }
+        public static int question(int Money, string Product, int Total)
+        {
+            Console.WriteLine("Do you want buy " + Product + " for " + Money + " Euro? Yes or No ");
+            string YesOrNo = Console.ReadLine();
+            if (YesOrNo == "Yes" || YesOrNo == "yes")
+            {
+                Total = Total + Money;
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+            Console.WriteLine(Total);
+            return Total;
+        }
+        public static void groceryshop()
+        {
+            int Total = 0;
+            Total = question(2, "Milk", Total);
+            Total = question(1, "Bread", Total);
+            Total = question(3, "Pastry", Total);
+            Console.WriteLine("Total Price " + Total);
         }
         public static void HeightAndSex()
         {
             Console.Write("Enter your height ");
             float Height = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Enter you sex ");
+            Console.Write("Enter you sex User M or W ");
             string Sex = Console.ReadLine();
+            if (Sex == "M" || Sex == "m")
+            {
+                Console.WriteLine('M');
+                if (Height < 20)
+                {
+                    Console.WriteLine("You are joking");
+                    Console.WriteLine("Hahah very funny");
+                }
+                else if (Height < 100)
+                {
+                    Console.WriteLine("Very low");
+                }
+                else if (Height < 140)
+                {
+                    Console.WriteLine("Write line");
+                }
+                else if (Height < 170)
+                {
+                    Console.WriteLine("It's ok");
+                }
+                else
+                {
+                    Console.WriteLine("High");
+                }
+            }
+            else if (Sex == "W" || Sex == "w")
+            {
+                Console.WriteLine('W');
+                if (Height < 20)
+                {
+                    Console.WriteLine("You are joking");
+                    Console.WriteLine("Hahah very funny");
+                }
+                else if (Height < 80)
+                {
+                    Console.WriteLine("Very low");
+                }
+                else if (Height < 120)
+                {
+                    Console.WriteLine("Write line");
+                }
+                else if (Height < 150)
+                {
+                    Console.WriteLine("It's ok");
+                }
+                else
+                {
+                    Console.WriteLine("High");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
         }
         public static void Height()
         {
