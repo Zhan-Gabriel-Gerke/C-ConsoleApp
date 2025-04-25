@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_ConsoleApp
 {
-    internal class FunktsioonideClass_2osa
+    /*internal class FunktsioonideClass_2osa
     {
 
         public static List<string> Sonad()
@@ -40,5 +40,5 @@ namespace C_ConsoleApp
             return isikud;
         }
 
-    }
+    }*/
 }

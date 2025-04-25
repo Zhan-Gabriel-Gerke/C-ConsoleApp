@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_ConsoleApp
 {
-    internal enum Sugu
+    /*internal enum Sugu
     {
         Mees,
         Naine
@@ -34,5 +34,5 @@ namespace C_ConsoleApp
         {
             Console.WriteLine($"Nimi: {Nimi}, Vanus: {Vanus}, Isikukood: {Isikukood}, Aadress: {Aadress}, Sugu:{Sugu}\n");
         }
-    }
+    }*/
 }
