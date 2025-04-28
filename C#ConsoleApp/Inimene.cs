@@ -10,10 +10,6 @@ namespace C_ConsoleApp
     {
         public string Nimi { get; set; }//Поле
         public int Vanus { get; set; }
-        public static void Statistika(List<Inimene> inimesed)
-        {
-
-        }
     }
 }
 //public static int question(int Money, string Product, int Total)
