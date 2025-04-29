@@ -8,5 +8,7 @@ namespace C_ConsoleApp
 {
     class Opilane
     {
+        public string Name { get; set; }
+        public List<Marks> Mark { get; set; } = new List<Mark>();
     }
 }
