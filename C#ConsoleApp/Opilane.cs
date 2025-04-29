@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_ConsoleApp
 {
-    class Class1
+    class Opilane
     {
     }
 }
