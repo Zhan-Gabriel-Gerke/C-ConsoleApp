@@ -34,6 +34,8 @@ namespace C_ConsoleApp
             var tempvar = Exchange();
             //tempvar.Item1 = Current
             //tempvar.Item2 = Exchangerate
+            
+
         }
         public static (string, int) Exchange()
         {
