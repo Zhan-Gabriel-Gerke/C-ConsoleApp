@@ -22,7 +22,28 @@ namespace C_ConsoleApp
         }
         public static void MoneyExchange()
         {
-
+            List<Valuuta> Current = new List<Valuuta>();
+            Valuuta USD = new Valuuta();
+            USD.Name = "Name";
+            USD.Exchangerate = 1.14;
+            Valuuta RUB = new Valuuta();
+            RUB.Name = "Rubles";
+            RUB.Exchangerate = 92.41;
+            Current.Add(USD);
+            Current.Add(RUB);
+            var tempvar = Exchange();
+            //tempvar.Item1 = Current
+            //tempvar.Item2 = Exchangerate
+        }
+        public static (string, int) Exchange()
+        {
+            Console.Write("Enter name of the current USD, RUB ");
+            string current = Console.ReadLine();
+            Console.WriteLine("What do you want");
+            Console.WriteLine($"From EUR to {current} Enter - 1");
+            Console.WriteLine($"From {current} to EUR Enter - 2");
+            int options = int.Parse(Console.ReadLine());
+            return (current, options);
         }
         public static void AnimalsSystem()
         {
