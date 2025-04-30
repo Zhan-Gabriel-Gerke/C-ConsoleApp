@@ -17,7 +17,12 @@ namespace C_ConsoleApp
         public static void Main(string[] args)
         {
             //Opilane();(
-            AnimalsSystem();
+            //AnimalsSystem();
+            MoneyExchange();
+        }
+        public static void MoneyExchange()
+        {
+
         }
         public static void AnimalsSystem()
         {
