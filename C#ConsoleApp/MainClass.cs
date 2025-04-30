@@ -34,8 +34,13 @@ namespace C_ConsoleApp
             var tempvar = Exchange();
             //tempvar.Item1 = Current
             //tempvar.Item2 = Exchangerate
-            
-
+            foreach (Valuuta r in Current)
+            {
+                if (r.Name == tempvar.Item1)
+                    {
+                    //unfinished
+                    }
+            }
         }
         public static (string, int) Exchange()
         {
