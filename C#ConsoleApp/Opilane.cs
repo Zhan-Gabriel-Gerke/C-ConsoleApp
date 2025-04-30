@@ -9,6 +9,7 @@ namespace C_ConsoleApp
     class Opilane
     {
         public string Name { get; set; }
-        public List<Opilane> Opilane { get; set; } = new List<Opilane>();
+        public List<int> Grades { get; set; }
+
     }
 }
