@@ -18,21 +18,37 @@ namespace C_ConsoleApp
         public static void Main(string[] args)
         {
             //Klass1();
-            Parilus2();
+            //Parilus2();
+            //Abstraktsioon3();
+            encapsulation4();
         }
         //public static void MoneyExchange()
         public static void Klass1 ()
         {
             Inimene inimene = new Inimene();
             inimene.Nimi = "Zhan";
-            inimene.
             inimene.Tervita();
         }
         public static void Parilus2()
         {
            Tootaja Role = new Tootaja();
+            Role.Nimi = "Zhan";
             Role.Ametikoht = "GEL";
             Role.Tootan();
+        }
+        public static void Abstraktsioon3()
+        {
+            //Koer loom = new Koer();
+            Kass loom = new Kass();
+            loom.Nimi = "Bruno";
+            loom.TeeHaal();
+        }
+        public static void encapsulation4()
+        {
+            Pank Conto = new Pank();
+            Conto.Saldo = 100;
+            Console.WriteLine(Conto.Saldo);
+            Console.WriteLine(Conto.Saldo);
         }
     }
 }
