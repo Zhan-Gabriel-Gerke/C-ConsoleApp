@@ -15,5 +15,25 @@ namespace C_ConsoleApp
             Console.WriteLine($"{Nimi} works as {Ametikoht}.");
         }
     }
+    public interface ITooline
+    {
+        double ArvutaPalk();
+    }
+
+    public class TootajaNaiteks : Inimene, ITooline
+    {
+        public double Tunnitasu;
+        public int Tunnid;
+
+        public double ArvutaPalk()
+        {
+            return Tunnitasu * Tunnid;
+        }
+
+        public override string ToString()
+        {
+            return $"{Nimi}, Vanus: {Vanus}, Palk: {ArvutaPalk()}";
+        }
+    }
 
 }

@@ -20,7 +20,9 @@ namespace C_ConsoleApp
             //Klass1();
             //Parilus2();
             //Abstraktsioon3();
-            encapsulation4();
+            //encapsulation4();
+            //interface5();
+            NaideKasutuses();
         }
         //public static void MoneyExchange()
         public static void Klass1 ()
@@ -49,6 +51,21 @@ namespace C_ConsoleApp
             Conto.Saldo = 100;
             Console.WriteLine(Conto.Saldo);
             Console.WriteLine(Conto.Saldo);
+        }
+        public static void interface5()
+        {
+            Cat cat = new Cat();
+            cat.TeeHääl();
+        }
+        public static void NaideKasutuses()
+        {
+            TootajaNaiteks Example1 = new TootajaNaiteks();
+            Example1.Tunnitasu = 7;
+            Example1.Nimi = "Matias";
+            Example1.Vanus = 30;
+            Example1.Tunnid = 100;
+            double palk = Example1.ArvutaPalk();
+            Console.WriteLine(Example1);
         }
     }
 }
