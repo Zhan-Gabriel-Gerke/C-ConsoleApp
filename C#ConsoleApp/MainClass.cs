@@ -22,10 +22,11 @@ namespace C_ConsoleApp
             //Abstraktsioon3();
             //encapsulation4();
             //interface5();
-            NaideKasutuses();
+            //NaideKasutuses();
+            //BaasklassEx();
         }
         //public static void MoneyExchange()
-        public static void Klass1 ()
+        public static void Klass1()
         {
             Inimene inimene = new Inimene();
             inimene.Nimi = "Zhan";
@@ -33,7 +34,7 @@ namespace C_ConsoleApp
         }
         public static void Parilus2()
         {
-           Tootaja Role = new Tootaja();
+            Tootaja Role = new Tootaja();
             Role.Nimi = "Zhan";
             Role.Ametikoht = "GEL";
             Role.Tootan();
@@ -66,6 +67,13 @@ namespace C_ConsoleApp
             Example1.Tunnid = 100;
             double palk = Example1.ArvutaPalk();
             Console.WriteLine(Example1);
+        }
+        public static void BaasklassEx()
+        {
+            Baasklass Example1 = new Baasklass();
+            Example1.Nimi = "Test";
+            Example1.Sunniaasta = 2000;
+            Example1.Kirjelda();
         }
     }
 }

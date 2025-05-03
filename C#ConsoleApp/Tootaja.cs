@@ -35,5 +35,4 @@ namespace C_ConsoleApp
             return $"{Nimi}, Vanus: {Vanus}, Palk: {ArvutaPalk()}";
         }
     }
-
 }
