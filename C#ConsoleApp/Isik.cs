@@ -41,7 +41,7 @@ namespace C_ConsoleApp
         public double Tunnitasu { get; set; }
         public int TunnidNädalas { get; set; }
 
-        public double ArvutaPalk()
+        public virtual double ArvutaPalk()
         {
             return Tunnitasu * TunnidNädalas * 4; // Месячная зарплата (4 недели)
         }
@@ -60,7 +60,45 @@ namespace C_ConsoleApp
         {
             Console.WriteLine($"{Nimi} — {Vanus}-Year Old, Study at {Kool} in {Klass} Grade.");
         }
+        public bool AdultOrNot()
+        {
+            if (Vanus >= 18)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
-
+    public class Direktor : Opetaja
+    {
+        public int Lisatasu { get; set; }
+        public override double ArvutaPalk()
+        {
+            return (Tunnitasu * TunnidNädalas * 4) + Lisatasu;
+        }
+    }
+    public interface IHindaja
+    {
+        void Hinda(int grade);
+    }
+    public class Teacher : IHindaja
+    {
+        public int grade { get; set; }
+        public string Name { get; set; }
+        public void Hinda(int grade)
+        {
+            Console.WriteLine($"Viimane mark {grade}");
+        }
+    }
+    public class UliIpilane : Opilane
+    {
+        public string Eriala { get; set; }
+        public override void Kirjelda()
+        {
+            Console.WriteLine($"{Nimi} — {Vanus}-Year Old, Study at {Kool} in {Eriala} Occupation.");
+        }
+    }
 }
-

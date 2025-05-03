@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using System.Security.Principal; // Added for File and Path classes
+using System.Security.Principal;
+using System.ComponentModel.Design; // Added for File and Path classes
 //"-Текст
 //'-Символ
 
@@ -25,7 +26,11 @@ namespace C_ConsoleApp
             //NaideKasutuses();
             //BaasklassEx();
             //Alamklass3();
-            Alarmklass4();
+            //Alarmklass4();
+            //Harjutus2();
+            //Harjutus3();
+            //Harjutus4();
+            Harjutus5();
         }
         //public static void MoneyExchange()
         public static void Klass1()
@@ -95,5 +100,57 @@ namespace C_ConsoleApp
             Example1.Klass = 13;
             Example1.Kirjelda();
         }
+        public static void Harjutus2()
+        {
+            Direktor direktor = new Direktor
+            {
+                Nimi = "Ants Antson",
+                Sunniaasta = 1970,
+                Tunnitasu = 30,
+                TunnidNädalas = 20,
+                Lisatasu = 500
+            };
+            direktor.Kirjelda();
+        }
+        public static void Harjutus3()
+        {
+            Teacher teacher = new Teacher();
+            teacher.Name = "Test";
+            teacher.grade = 6;
+            teacher.Hinda(teacher.grade);
+
+        }
+        public static void Harjutus4()
+        {
+            UliIpilane tudeng = new UliIpilane
+            {
+                Nimi = "Kaisa Kask",
+                Sunniaasta = 2002,
+                Kool = "TÜ",
+                Klass = 1,
+                Eriala = "Informaatika"
+            };
+            tudeng.Kirjelda();
+        }
+        public static void Harjutus5()
+        {
+            Opilane Example1 = new Opilane();
+            Example1.Nimi = "Test";
+            Example1.Sunniaasta = 2020;
+            Example1.Kool = "TTHK";
+            Example1.Klass = 13;
+            Example1.Kirjelda();
+            if (Example1.AdultOrNot())
+                Console.WriteLine("Õpilane on täisealine.");
+            else
+                Console.WriteLine("Õpilane on alaealine.");
+
+        }
     }
+    /*overide - Можно изменить метод или свойство которое унаследовано
+     * если метод или свойство было помечено virtual
+     * 
+     * инскапсуляция - скрытие данных и использование безопастных методов
+     * для безопастного доступа
+     */
 }
