@@ -20,7 +20,7 @@ namespace C_ConsoleApp
         double ArvutaPalk();
     }
 
-    public class TootajaNaiteks : Inimene, ITooline
+    /*public class TootajaNaiteks : Inimene, ITooline
     {
         public double Tunnitasu;
         public int Tunnid;
@@ -34,5 +34,5 @@ namespace C_ConsoleApp
         {
             return $"{Nimi}, Vanus: {Vanus}, Palk: {ArvutaPalk()}";
         }
-    }
+    }*/
 }

@@ -36,5 +36,31 @@ namespace C_ConsoleApp
             Console.WriteLine($"Description{Nimi}, {Sunniaasta}");
         }
     }
+    public class Opetaja : Isik, ITooline
+    {
+        public double Tunnitasu { get; set; }
+        public int TunnidNädalas { get; set; }
+
+        public double ArvutaPalk()
+        {
+            return Tunnitasu * TunnidNädalas * 4; // Месячная зарплата (4 недели)
+        }
+
+        public override void Kirjelda()
+        {
+            Console.WriteLine($"Õpetaja {Nimi}, vanus {Vanus}, teenib kuus {ArvutaPalk():F2}€");//F2 - Два знака после запятой
+        }
+    }
+    public class Opilane : Isik
+    {
+        public string Kool { get; set; }  // Школа
+        public int Klass { get; set; }  // Класс
+
+        public override void Kirjelda()
+        {
+            Console.WriteLine($"{Nimi} — {Vanus}-Year Old, Study at {Kool} in {Klass} Grade.");
+        }
+    }
+
 }
 

@@ -24,6 +24,8 @@ namespace C_ConsoleApp
             //interface5();
             //NaideKasutuses();
             //BaasklassEx();
+            //Alamklass3();
+            Alarmklass4();
         }
         //public static void MoneyExchange()
         public static void Klass1()
@@ -58,7 +60,7 @@ namespace C_ConsoleApp
             Cat cat = new Cat();
             cat.TeeHääl();
         }
-        public static void NaideKasutuses()
+        /*public static void NaideKasutuses()
         {
             TootajaNaiteks Example1 = new TootajaNaiteks();
             Example1.Tunnitasu = 7;
@@ -67,12 +69,30 @@ namespace C_ConsoleApp
             Example1.Tunnid = 100;
             double palk = Example1.ArvutaPalk();
             Console.WriteLine(Example1);
-        }
+        }*/
         public static void BaasklassEx()
         {
             Baasklass Example1 = new Baasklass();
             Example1.Nimi = "Test";
             Example1.Sunniaasta = 2000;
+            Example1.Kirjelda();
+        }
+        public static void Alamklass3()
+        {
+            Opetaja Example1 = new Opetaja();
+            Example1.Nimi = "Test";
+            Example1.Sunniaasta = 2000;
+            Example1.TunnidNädalas = 50;
+            Example1.Tunnitasu = 6;
+            Example1.Kirjelda();
+        }
+        public static void Alarmklass4()
+        {
+            Opilane Example1 = new Opilane();
+            Example1.Nimi = "Test";
+            Example1.Sunniaasta = 2000;
+            Example1.Kool = "TTHK";
+            Example1.Klass = 13;
             Example1.Kirjelda();
         }
     }
